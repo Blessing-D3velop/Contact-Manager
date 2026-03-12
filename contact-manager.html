@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Manager</title>
+  <link rel="stylesheet" href="Header.css">
+  <link rel="stylesheet" href="Main.css">
+  <link rel="stylesheet" href="cards-container.css">
+</head>
+<body>
+
+  <header>
+    <div class="heading-div">
+      <p class="heading">Contact Manager</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="search-sort-button-container">
+      <div class="search-container">
+        <input type="text" 
+               placeholder="Search contacts by name, phone, or email..." 
+               class="search-input" 
+               required>
+      </div>
+
+      <div class="sort-container">
+        <select class="dropdown">
+          <option value="name">Sort by Name</option>
+          <option value="email">Sort by Email</option>
+          <option value="phone">Sort by Phone</option>
+        </select>
+      </div>
+
+      <div class="button-container">
+        <button class="add-contact-button js-add-contact-button">
+          + Add Contact
+        </button>
+        <div class="js-backdrop" style="display: none;"></div>
+        <div class="js-add-contact-container"></div>
+      </div>
+    </div>
+
+    <div class="contact-image-container">
+      
+      <div class="empty-state js-empty-state">
+
+        <img src="Icons/icons8-contact-50.png" alt="Icon" class="contact-icon">
+        <p class="contacts-details">No contacts yet</p>
+        <p class="add-contact-label">Get started by adding your first contact</p>
+        <button class="add-first-contact-button js-add-contact-button">
+          + Add Your First Contact
+        </button>
+
+      </div>
+
+      <div class="cards js-cards-grid">
+        <!-- Contacts will appear here dynamically -->
+      </div>
+    </div>
+  </main>
+
+  <script src="contact-manager.js"></script>
+</body>
+</html>

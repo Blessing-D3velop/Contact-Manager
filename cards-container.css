@@ -1,0 +1,158 @@
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: -20px;
+  margin: 10px 30px;
+  gap: 15px;
+  
+}
+
+.card-container{
+  background-color: #f9fafb;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  width: 400px;
+  border: 1px solid rgb(194, 194, 194);
+  
+  
+}.first-line{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -20px;
+}
+
+    .name-icon{
+      height: 47px;
+      padding-right: 10px;
+      margin-top: -20px;
+    }.name-text{
+      font-size: 19px;
+      color: rgb(30, 29, 54);
+    }
+
+.second-line{
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+
+}   .phone-text,
+    .email-text{
+      font-size: 14px;
+      padding-top: 8px;
+      color: rgb(38, 38, 58);
+    }
+    .phone-icon,
+    .email-icon{
+      width: 18px;
+      padding-top: 5px;
+    }
+
+.third-line{
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  margin-top: -28px;
+}
+
+.container-card-buttton{
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 15px;
+}   .edit-button,
+.delete-button{
+  width: 200px;
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  justify-content: center;
+  border-radius: 10px;
+  height: 40px;
+}
+
+.edit-button{
+  color: rgba(34, 122, 255, 0.945);
+  transition: background-color 0.2s;
+}
+
+.edit-button:hover{
+  background-color: rgba(34, 122, 255, 0.1);
+}
+
+.delete-button{
+  color: red;
+  transition: background-color 0.2s;
+  
+}
+
+.delete-button:hover{
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+
+
+
+@media(max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:400px) {
+  .cards {
+    grid-template-columns: 1fr;
+    margin-top: -20px;
+    margin: 10px 30px;
+    gap: 15px;
+  }.card-container{
+
+  padding: 20px;
+  cursor: pointer;
+  min-width: 250px;
+  max-width: 250px; 
+}
+  .name-icon{
+    height: 37px;
+    margin-top: -15px;
+  }.name-text{
+    font-size: 17px;
+
+  }.second-line{
+
+  column-gap: 6px;
+
+}   .phone-text,
+    .email-text{
+      font-size: 12px;
+      padding-top: 10px;
+
+    }
+    .phone-icon,
+    .email-icon{
+      width: 16px;
+
+    }
+  .container-card-buttton{
+
+    column-gap: 6px;
+    padding-top: 15px;
+  }   .edit-button,
+.delete-button{
+  width: 150px;
+  font-size: 13px;
+
+  column-gap: 8px;
+  height: 30px;
+}
+
+
+  
+}
+
