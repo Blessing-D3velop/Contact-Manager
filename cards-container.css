@@ -102,10 +102,16 @@
 @media(max-width: 900px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
-  }
+  }.card-container{
+
+  padding: 20px;
+  cursor: pointer;
+  min-width: 250px;
+  max-width: 300px; 
+}
 }
 
-@media(max-width:400px) {
+@media(max-width:600px) {
   .cards {
     grid-template-columns: 1fr;
     margin-top: -20px;
@@ -154,4 +160,3 @@
 
   
 }
-
