@@ -240,6 +240,7 @@ input{
 
   .add-contact-label{
     font-size: 13px;
+
   }
   .add-first-contact-button{
     width: 130px;
@@ -368,7 +369,7 @@ input{
   .contact-form{
     gap: 10px;
     width: 200px;
-    height: 250px;
+    height: 350px;
     padding: 15px;
     left: -62px;
     top: 30px;
