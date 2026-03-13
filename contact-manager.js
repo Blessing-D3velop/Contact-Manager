@@ -1,16 +1,24 @@
-let contacts = [
 
-];
+let contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+
 
 let container = document.querySelector('.js-add-contact-container');
 let addContactButtons = document.querySelectorAll('.js-add-contact-button');
 let backdrop = document.querySelector('.js-backdrop');
 let cardsContainer = document.querySelector('.js-cards-grid');
 
+let saveToStorage = () =>{
+  localStorage.setItem('contacts', JSON.stringify(contacts));
+    
+}
+
+
 // Function to render cards
 function renderContacts() {
   cardsContainer.innerHTML = '';
-  contacts.forEach(contact => {
+
+  for (let i = 0; i < contacts.length; i++) {
+    const contact = contacts[i];
     let html = `
       <div class="card-container">
         <div class ="first-line">
@@ -42,11 +50,11 @@ function renderContacts() {
 
 
         <div class="container-card-buttton">
-          <button class="edit-button">
+          <button class="edit-button js-edit-button">
             <img src="Icons/icons8-edit.svg" alt="edit-icon" class="edit-icon">
             Edit
           </button>
-          <button class="delete-button">
+          <button class="delete-button js-delete-button">
             <img src="Icons/icons8-delete.svg" alt="delete icon" class="delete-icon">
             Delete
           </button>
@@ -55,7 +63,7 @@ function renderContacts() {
 
   `;
     cardsContainer.innerHTML += html;
-  });
+  };
     // Show or hide empty state
   const emptyState = document.querySelector('.js-empty-state');
   if (contacts.length > 0) {
@@ -63,11 +71,22 @@ function renderContacts() {
   } else {
     emptyState.style.display = 'block';
   }
+  //-Delete Card
+let deleteButton = document.querySelectorAll('.js-delete-button');
+
+for(let i = 0; i < deleteButton.length; i++){
+  deleteButton[i].addEventListener('click', () =>{
+    contacts.splice(i, 1);
+    saveToStorage();
+    renderContacts();
+  })
+}
+
 }
 
 // Open form
-addContactButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
+for (let i = 0; i < addContactButtons.length; i++) {
+  addContactButtons[i].addEventListener('click', () => {
     backdrop.style.display = 'block';
     let html = `
       <div class="contact-form">
@@ -123,7 +142,15 @@ addContactButtons.forEach(btn => {
       contacts.push({name, email, phone});
       container.innerHTML = '';
       backdrop.style.display = 'none';
+
+      saveToStorage();
       renderContacts();
+
+
+
+
     });
   });
-});
+};
+renderContacts();
+

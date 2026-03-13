@@ -6,6 +6,9 @@
   gap: 15px;
   
 }
+.contact-image-container{
+  margin-top: -20px;
+}
 
 .card-container{
   background-color: #f9fafb;
@@ -99,7 +102,7 @@
 
 
 
-@media(max-width: 900px) {
+@media(max-width: 1080px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }.card-container{
@@ -111,7 +114,7 @@
 }
 }
 
-@media(max-width:600px) {
+@media(max-width:722px) {
   .cards {
     grid-template-columns: 1fr;
     margin-top: -20px;
@@ -155,8 +158,25 @@
   font-size: 13px;
   column-gap: 8px;
   height: 30px;
+} 
 }
 
+@media(min-width: 1081px){
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }.card-container{
 
-  
+  padding: 20px;
+  cursor: pointer;
+  min-width: 200px;
+  max-width: 300px; 
+}
+.contact-image-container{
+    margin-top: -20px;
+}main{
+
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
 }
