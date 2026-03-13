@@ -358,7 +358,7 @@ input{
     width: 200px;
     height: 350px;
     padding: 15px;
-    left: 135px;
+    left: -135px;
     top: 30px;
 } 
 }

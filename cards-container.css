@@ -32,6 +32,7 @@
     }.name-text{
       font-size: 19px;
       color: rgb(30, 29, 54);
+      word-break: break-word;
     }
 
 .second-line{
