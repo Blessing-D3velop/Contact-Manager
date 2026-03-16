@@ -217,7 +217,7 @@ let editButton = document.querySelectorAll('.js-edit-button');
         } else if (!email.includes('@')) {
           output.textContent = 'Invalid Email';
           return;
-        } else if (!phone || phone.replace(/\D/g,'').length !== 11) {
+        } else if (!phone || phone.replace(/\D/g,'').length !== 10 || !phone.trim()) {
           output.textContent = 'Phone number must be 10 digits';
           return;
         }
@@ -281,7 +281,7 @@ for (let i = 0; i < addContactButtons.length; i++) {
       } else if (!email.includes('@')) {
         output.textContent = 'Invalid Email';
         return;
-      } else if (!phone || phone.replace(/\D/g,'').length !== 10) {
+      } else if (!phone || phone.replace(/\D/g,'').length !== 10 || !phone.trim()) {
         output.textContent = 'Phone number must be 10 digits';
         return;
       }
