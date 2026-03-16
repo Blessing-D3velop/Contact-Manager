@@ -35,9 +35,9 @@ main{
   max-width: 100%;
   background-size: 20px 20px;
   box-sizing: border-box;
-}  .search-input::placeholder{
-      padding-left: 35px;
-    }
+  padding-left: 35px;
+  color: white;
+}
 
 .dropdown{
   height: 45px;
@@ -47,7 +47,8 @@ main{
   border-style: solid;
   border-width: 1px;
   font-size: 15px;
-  color: aliceblue;
+  color: black;
+  background-color: black;
   background-color: transparent;
 }   .dropdown{
       padding-left: 10px;
@@ -191,7 +192,8 @@ input{
   justify-content: center;
 }  
     .add-button,
-    .cancel-button{
+    .cancel-button,
+    .update-button{
       width: 100%;
       padding: 10px;
       border: none;
@@ -199,7 +201,8 @@ input{
       height: 42px;
     }
 
-    .add-button{
+    .add-button,
+    .update-button{
       background-color: rgba(34, 122, 255, 0.945);
       color: white;
     }
@@ -239,6 +242,8 @@ input{
     font-size: 20px;
     font-weight: bold;
     margin-top: -12px;
+    color: white;
+    
   }
 
   .add-contact-label{
@@ -361,6 +366,18 @@ input{
     left: -135px;
     top: 30px;
 } 
+}@media(min-width: 351px ) and (max-width:382px){
+
+
+
+  .contact-form{
+    gap: 10px;
+    width: 200px;
+    height: 350px;
+    padding: 15px;
+    left: -123px;
+    top: 60px;
+}
 }
 
 @media(min-width: 351px ) and (max-width:478px){
@@ -385,7 +402,8 @@ input{
     width: 200px;
     height: 350px;
     padding: 15px;
-    left: -240px;
+    /**/
+    left: -40px;
     top: 60px;
 } 
 }
@@ -399,6 +417,20 @@ input{
     height: 350px;
     padding: 15px;
     left: -53px;
+    top: 60px;
+}
+}
+
+@media(min-width: 515px ) and (max-width:550px){
+
+
+
+  .contact-form{
+    gap: 10px;
+    width: 200px;
+    height: 350px;
+    padding: 15px;
+    left: -253px;
     top: 60px;
 }
 }
