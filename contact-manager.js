@@ -27,8 +27,14 @@ let sortContacts = (type) => {
 
   contacts.sort((a, b) => {
     if(type === 'name') return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
-    if(type === 'phone') return a.phone.localeCompare(b.phone);
     if(type === 'email') return a.email.toLowerCase().localeCompare(b.email.toLowerCase());
+    if(type === 'phone') {
+    // Remove non-digits and compare numerically
+    let numA = Number(a.phone.replace(/\D/g,''));
+    let numB = Number(b.phone.replace(/\D/g,''));
+    return numA - numB;
+  }
+  return 0;
   });
 
   renderContacts();
