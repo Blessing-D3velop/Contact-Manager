@@ -36,7 +36,6 @@ main{
   background-size: 20px 20px;
   box-sizing: border-box;
   padding-left: 35px;
-  color: white;
 }
 
 .dropdown{
@@ -47,8 +46,7 @@ main{
   border-style: solid;
   border-width: 1px;
   font-size: 15px;
-  color: black;
-  background-color: black;
+  color: rgb(32, 31, 31);
   background-color: transparent;
 }   .dropdown{
       padding-left: 10px;
@@ -339,10 +337,10 @@ input{
 }   input::placeholder{
       padding-left: 8px;
       
-}.cancel-button{
+}
+ .cancel-button{
   height: 100%;
 }
- 
 }
 /*@media(max-width: 267px){
 
@@ -371,29 +369,32 @@ input{
 }
 
 @media(min-width: 351px ) and (max-width:478px){
+
+
+
   .contact-form{
     gap: 10px;
     width: 200px;
     height: 350px;
     padding: 15px;
-    left: -138px;
     top: 30px;
-} .cancel-button{
-  height: 100%;
-}
+} 
 }
 
 @media(min-width: 479px ) and (max-width:550px){
 
+
+
   .contact-form{
     gap: 10px;
     width: 200px;
     height: 350px;
     padding: 15px;
+    left: -240px;
     top: 60px;
 } 
-}
-@media(min-width: 480px ) and (max-width:481px){
+}/**/
+@media(min-width: 480px ) and (max-width:512px){
 
 
 
@@ -407,6 +408,21 @@ input{
 }
 }
 
+/**/
+
+@media(min-width: 351px ) and (max-width:383px){
+
+
+
+  .contact-form{
+    gap: 10px;
+    width: 200px;
+    height: 350px;
+    padding: 15px;
+    left: -123px;
+    top: 60px;
+}
+}
 
 
 
